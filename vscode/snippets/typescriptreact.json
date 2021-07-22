@@ -1,0 +1,171 @@
+{
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "snippet-logd": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "logd",
+    "body": "console.log('');//eslint-disable-line\nconsole.log('╔════START══$1══════════════════════════════════════════════════');//eslint-disable-line\nconsole.log($1);//eslint-disable-line\nconsole.log('╚════END════$1══════════════════════════════════════════════════');//eslint-disable-line\n",
+    "description": "Console Debug"
+  },
+  "snippet-logds": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "logds",
+    "body": "console.log('');//eslint-disable-line\nconsole.log('╔════START══$1══════════════════════════════════════════════════');//eslint-disable-line\nconsole.log(JSON.stringify($1, null, 2));//eslint-disable-line\nconsole.log('╚════END════$1══════════════════════════════════════════════════');//eslint-disable-line\n\n",
+    "description": "Console Debug Stringify"
+  },
+  "snippet-logs": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "logs",
+    "body": "console.log(JSON.stringify($1, null, 2));//eslint-disable-line\n",
+    "description": "Console Debug String"
+  },
+  "snippet-logf": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "logf",
+    "body": "console.log(Object.getOwnPropertyNames($1));//eslint-disable-line\n",
+    "description": "Console Debug object functions"
+  },
+  "snippet-__": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "__",
+    "body": "__({ id: '$1', defaultMessage: '$1' }, this.context)",
+    "description": "Translate__"
+  },
+  "snippet-Translate": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "translate",
+    "body": "<Translate id=\"$1\" defaultMessage=\"$1\" />",
+    "description": "Translate"
+  },
+  "snippet-TranslateDate": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "transdate",
+    "body": "<TranslateDate value=\"$1\" format=\"lll\" />",
+    "description": "TranslateDate"
+  },
+  "snippet-transplur": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "transplur",
+    "body": "<Translate\n  id=\"\"\n  defaultMessage=\"{count, plural,\n	=0 {0 $1}\n	one {{count} $1}\n	other {{count} $1s}\n	}\"\n	values={{ count: nb }}\n />",
+    "description": "TranslatePlural"
+  },
+  "snippet-fun": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "fun",
+    "body": "(err) => {\nif (err) {\n  return callback(err);\n}\n }",
+    "description": "Function with error callback"
+  },
+  "snippet-imp": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "imp",
+    "body": "import $1 from '$1';\n",
+    "description": "Import Module"
+  },
+  "snippet-req": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "req",
+    "body": "const $1 = require('$1');\n",
+    "description": "require Module"
+  },
+  "snippet-exp": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "exp",
+    "body": "expect((res) => {\nconsole.log('==res.body==', res.body);\n})",
+    "description": "Expect function"
+  },
+  "snippet-for": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "for",
+    "body": "for (let i = 0; i < $1s.length; i++) {\nconst $1 = $1s[i];\n\n}",
+    "description": "For loop (es6)"
+  },
+  "snippet-rconst": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "rconst",
+    "body": "constructor(props) {\nsuper(props);\n\n$1\n}",
+    "description": "React constructor"
+  },
+  "snippet-rprops": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "rprops",
+    "body": "static propTypes = {\n// xxx: PropTypes.object,\n// xxx: PropTypes.func,\n// xxx: PropTypes.string,\n};",
+    "description": "React static proptypes"
+  },
+  "snippet-rbind": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "rbind",
+    "body": "this.$1 = this.$1.bind(this);",
+    "description": "React bind"
+  },
+  "snippet-logd-html": {
+    "scope": "html",
+    "prefix": "logd",
+    "body": "$1: {{$1}}<br/>",
+    "description": "Angular debug"
+  },
+  "snippet-rf": {
+    "prefix": "rf",
+    "body": [
+      "import React from 'react';",
+      "import s from './${TM_FILENAME_BASE}.module.css';",
+      "import classNames from 'classnames';",
+      "",
+      "",
+      "type ${TM_FILENAME_BASE}Props = {",
+      "  // TODO",
+      "} & React.HTMLAttributes<HTMLDivElement>",
+      "",
+      "",
+      "const ${TM_FILENAME_BASE}: React.FC<${TM_FILENAME_BASE}Props> = ({ children, className, ...props }) => {",
+      "  return (",
+      "    <div className={classNames(s.wrapper, className)}{...props}>",
+      "    ${TM_FILENAME_BASE}",
+      "    $1",
+      "    {children}",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ],
+    "description": "Create React functional component"
+  },
+  "snippet-t": {
+    "prefix": "t",
+    "body": [
+      "import { useTranslation } from 'next-i18next';",
+      "const { t } = useTranslation();"
+    ],
+    "description": "use translation hook"
+  },
+  "snippet-t(": {
+    "prefix": "t(",
+    "body": [
+      "t('${TM_DIRECTORY/^.*\\/src\\/modules\\/(.*)\\/(.*)/${1:/downcase}/}:$1','$2')"
+    ],
+    "description": "use translation function"
+  },
+  "snippet-trans": {
+    "prefix": "trans",
+    "body": [
+      "<Trans i18nKey=\"${TM_DIRECTORY/^.*\\/src\\/modules\\/(.*)\\/(.*)/${1:/downcase}/}:$1\">",
+      "",
+      "</Trans>"
+    ],
+    "description": "use translation component"
+  }
+}
