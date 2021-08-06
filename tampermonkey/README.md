@@ -8,7 +8,7 @@ In order to use this scripts in Tampermonkey, You need to
 - add before the `// ==/UserScript==` the path to your own script
 
 Example:
-`// @require      file:////Users/martin/Workspace/hooked/DevTools/tampermonkey/cloudwatch.js`
+`// @require file:////Users/martin/Workspace/ambanum/DevTools/tampermonkey/cloudwatch.js`
 
 CAUTION:
 Do not use ~ in your path
@@ -20,4 +20,3 @@ Do not use ~ in your path
 Go to [extension](chrome://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo) settings
 
 Check `Allow access to file URLs`
-
