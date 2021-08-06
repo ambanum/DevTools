@@ -21,9 +21,18 @@ GM_addStyle(`
       font-size: 11px;
       background: #333;
     }
+    .better-wekan-ongoing-list {
+      background: #242427;
+    }
 `);
 
 const mainSelector = ".swimlane.js-lists";
+
+const distinguishOngoing = (minicard) => {
+  document
+    .querySelector(".list.js-list:nth-child(3)")
+    .classList.add("better-wekan-ongoing-list");
+};
 
 const opacifyStandby = (minicard) => {
   minicard.style.opacity = minicard.innerHTML.includes("[STANDBY]") ? 0.2 : 1;
@@ -67,6 +76,7 @@ const setObserver = () => {
       subtree: true,
       characterData: true,
     });
+    distinguishOngoing();
     document.querySelectorAll(".minicard").forEach(opacifyStandby);
     document.querySelectorAll(".minicard p").forEach(createLabels);
   }
