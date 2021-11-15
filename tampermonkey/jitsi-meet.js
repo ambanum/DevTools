@@ -14,9 +14,7 @@ $(document).ready(function () {
   const interval = setInterval(setName, 1000);
 
   function setName() {
-    const button = document.querySelector(
-      "#lobby-screen > div.content > div.prejoin-input-area-container > div > div > div"
-    );
+    const button = document.querySelector("[aria-label='Join meeting']");
     console.log(button);
 
     if (button) {
